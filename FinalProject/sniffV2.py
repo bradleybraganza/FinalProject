@@ -40,7 +40,7 @@ def startSniffing():
  
 		usernames = ['Error: NONE'] # default constructor for the Username
 		passwords = ['Error: NONE'] # default constructor for the Password
-		ips = ['Error: None'] #default constructor for the list of IPs
+		#ips = ['Error: None'] #default constructor for the list of IPs
 		 
 		def loginCheck(pkt, username, password): #definition of a function
 				try:
@@ -140,21 +140,21 @@ userButton.config(height = 2, width = 13)
 userButton.grid(row= 3, column=1, pady = 10)
 
 userLabel = Label(master, text = 'Usernames ', bg='black', fg='green')
-userLabel.grid(row= 3, column=3)
+userLabel.grid(row= 3, column=3, sticky=W)
 
 passButton = Button(master, text = 'Print Passwords', command = printPass, bg='black', fg='green')
 passButton.config(height = 2, width = 13)
 passButton.grid(row= 4, column=1, pady = 10)
 
 passLabel = Label(master, text = 'Passwords ', bg='black', fg='green')
-passLabel.grid(row= 4, column=3)
+passLabel.grid(row= 4, column=3, sticky=W)
 
 ipButton = Button(master, text = 'Print IP Address', command = printIP, bg='black', fg='green')
 ipButton.config(height = 2, width = 13)
 ipButton.grid(row= 5, column=1,pady = 10)
 
 ipLabel = Label(master, text = 'IP Address ', bg='black', fg='green')
-ipLabel.grid(row= 5, column=3)
+ipLabel.grid(row= 5, column=3, sticky=W)
 
 exitButton = Button(master, text='Exit', command= quitProgram, bg='black', fg='red')
 exitButton.config(height = 2, width = 13)
